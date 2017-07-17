@@ -1,0 +1,35 @@
+.md-autocomplete {
+  position: relative; }
+  .md-autocomplete ul.options-list {
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    /*margin-top: -12px;*/
+    margin-top: 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    width: 100%;
+    overflow: hidden; }
+    .md-autocomplete ul.options-list li {
+      display: inline-block;
+      /*display: none;*/
+      width: 100%;
+      flex-wrap: wrap;
+      background: white;
+      margin: 0;
+      border-bottom: 1px solid #eee;
+      color: #363636;
+      padding: 7px 0;
+      cursor: pointer; }
+      .md-autocomplete ul.options-list li.highlighted {
+        background: #f8f8f8; }
+      .md-autocomplete ul.options-list li span {
+        padding: 10px; }
+  .md-autocomplete.is-focused i.mdl-icon-toggle__label {
+    color: blue; }
+  .md-autocomplete .mdl-menu__container {
+    width: 100% !important; }
+  .md-autocomplete .mdl-menu__container .mdl-menu {
+    width: 100%; }

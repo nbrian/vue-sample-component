@@ -1,0 +1,21 @@
+<div class="md-autocomplete mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" 
+        :id="genId"
+        v-model="keyword"
+        @input="onInput($event.target.value)"
+        @keyup.esc="isOpen = false"
+        @blur="isOpen = false"
+        @mousedown="focus"
+        @keydown.down="moveDown"
+        @keydown.up="moveUp"
+        @keydown.enter="select">
+    <label class="mdl-textfield__label" :for="genId">{{placeholder}}</label>
+    <ul v-show="isOpen" class="options-list">
+        <li v-for="(option, index) in fOptions" 
+            :class="{'highlighted': index === highlightedPosition}"
+            @mouseenter="highlightedPosition = index"
+            @mousedown="select">
+            <span>{{option.value}}</span>
+        </li>    
+    </ul>
+</div>
